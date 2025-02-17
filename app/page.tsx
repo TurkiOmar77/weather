@@ -7,8 +7,6 @@ export default function Home() {
   return (
     <div>
       <SearchBar onCahnge={setCity} /> 
-      
-
       <h1>{city}</h1>
     </div>
   );
