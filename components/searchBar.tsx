@@ -22,7 +22,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onCahnge }) => {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Write Country"
             />
-            <button onClick={handleSearch}>بحث</button>
+            <button onClick={handleSearch}>search</button>
         </div>
     );
 };
