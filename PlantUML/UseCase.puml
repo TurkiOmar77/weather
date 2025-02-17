@@ -1,0 +1,15 @@
+@startuml
+
+' Use Case Diagram
+actor User
+
+rectangle "Weather App" {
+  usecase "Search for weather" as UC1
+  usecase "View weather data" as UC2
+}
+
+User --> UC1
+User --> UC2
+UC1 --> UC2
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+
+' Component Diagram
+component "Next.js App" {
+  [Home Page]
+  [SearchBar Component]
+  [WeatherCard Component]
+  [ErrorMessage Component]
+}
+
+component "Services" {
+  [Weather Service]
+}
+
+component "External API" {
+  [OpenWeatherMap API]
+}
+
+[Home Page] --> [SearchBar Component]
+[Home Page] --> [WeatherCard Component]
+[Home Page] --> [ErrorMessage Component]
+
+[SearchBar Component] --> [Weather Service]
+[Weather Service] --> [OpenWeatherMap API]
+
+@enduml

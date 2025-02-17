@@ -1,0 +1,17 @@
+@startuml
+
+' Sequence Diagram
+actor User
+participant "SearchBar Component" as SB
+participant "Weather Service" as WS
+participant "OpenWeatherMap API" as API
+participant "WeatherCard Component" as WC
+
+User -> SB: Enter city name
+SB -> WS: Fetch weather data
+WS -> API: Request weather data
+API -> WS: Return weather data
+WS -> SB: Return weather data
+SB -> WC: Display weather data
+
+@enduml

@@ -1,0 +1,27 @@
+@startuml
+
+' Class Diagram
+class WeatherService {
+  +fetchWeather(city: string): WeatherData
+}
+
+class WeatherData {
+  +name: string
+  +country: string
+  +temperature: number
+  +description: string
+}
+
+class SearchBar {
+  +onSearch(city: string)
+}
+
+class WeatherCard {
+  +weather: WeatherData
+}
+
+WeatherService --> WeatherData
+SearchBar --> WeatherService
+WeatherCard --> WeatherData
+
+@enduml
