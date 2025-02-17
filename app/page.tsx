@@ -1,19 +1,18 @@
 "use client"
 import SearchBar from "@/components/searchBar";
+import WeatherCard from "@/components/WeatherCard";
 import { useWeather } from "@/hooks/useWeather";
 import { useState } from "react";
 
 export default function Home() {
   const [city, setCity] = useState("Mukalla")
-  const { weather } = useWeather(city)
+  const { weather,error } = useWeather(city)
+  
   return (
     <div>
       <SearchBar onCahnge={setCity} />
-      <h1>{weather?.name}</h1>
-      <h1>{weather?.sys.country}</h1>
-      <h1>{weather?.main.temp}</h1>
-      <h1>{weather?.weather[0].description}</h1>
-      <h1>{city}</h1>
+      {error && <h1>{error}</h1>}
+      {weather && <WeatherCard weather={weather} />}
     </div>
   );
 }
