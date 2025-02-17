@@ -16,11 +16,11 @@ const SearchBar: React.FC<SearchBarProps> = ({ onCahnge }) => {
 
     return (
         <div>
-            <input 
-                type="text" 
-                value={input} 
-                onChange={(e) => setInput(e.target.value)} 
-                placeholder="أدخل اسم المدينة"
+            <input
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Write Country"
             />
             <button onClick={handleSearch}>بحث</button>
         </div>
