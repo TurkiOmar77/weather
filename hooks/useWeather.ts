@@ -15,7 +15,7 @@ export const useWeather = (city: string) => {
                 setError(null)
 
             }catch(error){
-                setError("filed to fetch data ")
+                setError("Please make sure to enter the city name correctly")
 
             }
 
