@@ -14,7 +14,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ weather }) => {
 
   return (
     <motion.div
-      className="bg-gradient-to-br from-blue-600 to-indigo-900 text-white rounded-3xl shadow-2xl p-8 w-full max-w-md mx-auto flex flex-col items-center justify-center"
+      className="bg-gradient-to-br from-blue-400 to-indigo-950 text-white rounded-3xl shadow-2xl p-8 w-full max-w-md mx-auto flex flex-col items-center justify-center"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}

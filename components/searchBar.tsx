@@ -5,20 +5,21 @@ import { FaSearch } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 interface SearchBarProps {
-  onCahnge: (city: string) => void;
+  onChange: (city: string) => void;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onCahnge }) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onChange }) => {
   const [input, setInput] = useState("");
 
   const handleSearch = () => {
     if (input.trim()) {
-      onCahnge(input.trim());
-      setInput("");     }
+      onChange(input.trim());
+      setInput("");
+    }
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="flex items-center bg-white dark:bg-gray-800 rounded-full shadow-md overflow-hidden p-1 w-full max-w-md"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
@@ -36,6 +37,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onCahnge }) => {
       <button
         onClick={handleSearch}
         className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition"
+        aria-label="search"
       >
         <FaSearch size={16} />
       </button>
